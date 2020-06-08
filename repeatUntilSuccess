@@ -1,0 +1,21 @@
+#!/bin/bash
+
+missing_params(){
+	echo 'missings params'
+	echo 'repeatUntilSucess "<command>"'
+}
+
+
+if [ -z "$1" ]
+then
+	missing_params && exit
+fi
+
+
+
+while ! $1
+do
+  echo command "$1" not working
+  echo "Try again"
+done
+
