@@ -11,11 +11,14 @@ then
 	missing_params && exit
 fi
 
-
-
+# Check the result of that command by running it
 while ! $1
 do
-  echo command "$1" not working
-  echo "Try again"
+  echo
+  echo "Command \`$1\` not working"
+  echo "Try again:"
+  # Wait one seconde before re run the command
+  sleep 1
+  $1
 done
 
