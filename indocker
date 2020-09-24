@@ -1,0 +1,13 @@
+#!/bin/bash
+
+missing_params(){
+	echo 'missings params'
+	echo 'indocker image "<command>"'
+}
+
+if [ -z "$1" ] || [ -z "$2" ]
+then
+	missing_params && exit
+fi
+
+docker run -it -v $PWD:$PWD $1 sh -c "cd $PWD && $2"

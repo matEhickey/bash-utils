@@ -18,7 +18,7 @@ To use, add `alias mkcd=". ./mkcd.sh"` to your shell configuration files.
 
 Usage:
 
-```console
+```bash
 $ mkcd direcotry # Create a single directory and move into it
 $ mkcd path/to/new/directories # Create directories and childrens and move in the last child
 ```
@@ -29,7 +29,7 @@ Repeat a command.
 
 Usage:
 
-```console
+```bash
 $ repeat 4 "echo plop"
 plop
 plop
@@ -40,3 +40,12 @@ plop
 ### repeatUntilSuccess
 
 Run a command until the command exit succefully
+
+### indocker
+Create a docker environement copy the current folder in a container to execute direct command += seamlessly  
+
+Caution: Wont copy the parent folder !  
+
+```bash
+indocker lerignoux/python-fbx "python my_local_file.py"
+```
