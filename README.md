@@ -14,7 +14,10 @@ custom bash script for productivity
 
 Create directories and move into it.
 
-To use, add `alias mkcd=". ./mkcd.sh"` to your shell configuration files.
+Execute the next command to create the alias in the bashrc:
+```bash
+printf "alias mkcd=\". `pwd`/mkcd.sh\"" >> ~/.bashrc
+```
 
 Usage:
 
