@@ -19,6 +19,5 @@ do
   echo "Try again:"
   # Wait one seconde before re run the command
   sleep 1
-  $1
 done
 
