@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 missing_params(){
 	echo 'missings params'
 	echo 'indocker image "<command>"'
@@ -10,4 +12,10 @@ then
 	missing_params && exit
 fi
 
-docker run -it -v $PWD:$PWD $1 sh -c "cd $PWD && $2"
+port_command=""
+if [ "$3" ]
+then
+	port_command="-p $3:$3"
+fi
+
+docker run -it $port_command -v $PWD:$PWD $1 sh -c "cd $PWD && $2"
