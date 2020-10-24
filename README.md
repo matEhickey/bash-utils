@@ -55,3 +55,10 @@ Caution: Wont copy the parent folder !
 ```bash
 indocker lerignoux/python-fbx "python my_local_file.py"
 ```
+
+# retroterm
+Based on the cool https://github.com/Swordfish90/cool-retro-term 
+(actually, just launch the 'Futuristic' profile in fullscreen)
+```bash
+retroterm
+```
