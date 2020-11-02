@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+import sys
+import os
+
+def exec(cmd):
+    print(cmd)
+    os.system(cmd)
+
+mail = "mathias.didier7@wanadoo.fr"
+if len(sys.argv) > 1:
+    mail = sys.argv[1]
+
+exec(f"ssh-keygen -t rsa -C {mail}")

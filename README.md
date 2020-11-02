@@ -62,3 +62,11 @@ Based on the cool https://github.com/Swordfish90/cool-retro-term
 ```bash
 retroterm
 ```
+
+# ssh_create
+create default ssh keys
+
+first argument (optionnal) is to change email:`
+```sh
+ssh_create (mail)
+```
