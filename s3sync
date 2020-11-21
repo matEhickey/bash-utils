@@ -1,0 +1,29 @@
+#!/bin/bash
+
+missing_params(){
+	echo 'missings params'
+	echo 's3sync <bucket> [<refresh-delay (sec)> <localfolder>]'
+}
+
+
+if [ -z "$1" ]
+then
+	missing_params && exit
+fi
+
+# optionnal args
+delay=$2
+folder=$3
+
+if [ -z "$delay" ]
+then
+        delay=10
+fi
+
+if [ -z "$folder" ]
+then
+        folder=.
+fi
+
+
+watch -n $delay aws s3 sync $1 $folder --delete

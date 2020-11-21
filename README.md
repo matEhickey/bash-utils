@@ -66,7 +66,18 @@ retroterm
 # ssh_create
 create default ssh keys
 
-first argument (optionnal) is to change email:`
+first argument (optionnal) is to change email:
 ```sh
 ssh_create (mail)
 ```
+
+# s3sync
+Synchronise the current folder with the s3 bucket content  
+!! will erase files that are not in the bucket  
+
+
+```sh
+s3sync s3://matehickey.transfert  
+s3sync s3://matehickey.transfert 60 ./folder-to-update
+```
+
