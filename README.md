@@ -56,14 +56,14 @@ Caution: Wont copy the parent folder !
 indocker lerignoux/python-fbx "python my_local_file.py"
 ```
 
-# retroterm
+### retroterm
 Based on the cool https://github.com/Swordfish90/cool-retro-term 
 (actually, just launch the 'Futuristic' profile in fullscreen)
 ```bash
 retroterm
 ```
 
-# ssh_create
+### ssh_create
 create default ssh keys
 
 first argument (optionnal) is to change email:
@@ -71,7 +71,7 @@ first argument (optionnal) is to change email:
 ssh_create (mail)
 ```
 
-# s3sync
+### s3sync
 Synchronise the current folder with the s3 bucket content  
 !! will erase files that are not in the bucket  
 
@@ -81,3 +81,14 @@ s3sync s3://matehickey.transfert
 s3sync s3://matehickey.transfert 60 ./folder-to-update
 ```
 
+### eq
+Check if two files are equals.
+
+This script check if two files are equals using their check sum.
+If files are equals nothing will append (no news is good news).
+Otherwise the commande exit with code 1.
+
+The command should be use like this:
+```bash
+$ eq <file_A> <file_B>
+```
